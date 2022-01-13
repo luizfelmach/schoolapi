@@ -5,9 +5,9 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "start:prod": "node -r dotenv/config ./dist/index.js",
-    "start:dev": "ts-node -r dotenv/config ./src/index.ts",
-    "start:watch": "ts-node-dev -r dotenv/config --inspect --quiet --clear --transpile-only --ignore-watch node_modules ./src/index.ts"
+    "start:prod": "node ./dist/index.js",
+    "start:dev": "ts-node ./src/index.ts",
+    "start:watch": "ts-node-dev --inspect --quiet --clear --transpile-only --ignore-watch node_modules ./src/index.ts"
   },
   "dependencies": {
     "dotenv": "^11.0.0",

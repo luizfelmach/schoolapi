@@ -11,9 +11,9 @@ services:
     networks:
       - net
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: api
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PORT}
+      POSTGRES_DB: ${DB_NAME}
   server:
     container_name: server-container
     build: .

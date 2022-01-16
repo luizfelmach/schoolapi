@@ -2,15 +2,13 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 import express, { json } from "express";
-import { routes } from "./routes";
-import { serverPort } from "./configs/endpoints.config";
-import "./database/connection";
+import { router } from "./routes";
 
 const app = express();
 
 app.use(json());
-app.use("/api", routes);
+app.use("/api", router);
 
-app.listen(serverPort, () => {
-  console.log(`Server running on port ${serverPort}.`);
+app.listen(3000, () => {
+  console.log(`Server running on port ${3000}.`);
 });

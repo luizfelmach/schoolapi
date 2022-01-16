@@ -1,11 +1,7 @@
 import { Router } from "express";
-import ExamController from "./controllers/ExamController";
+import { createExamController } from "./controllers/exam";
+const router = Router();
 
-const routes = Router();
+router.post("/exams", createExamController.handle);
 
-routes.get("/exam", ExamController.view);
-routes.post("/exam", ExamController.create);
-routes.put("/exam", ExamController.update);
-routes.delete("/exam", ExamController.delete);
-
-export { routes };
+export { router };

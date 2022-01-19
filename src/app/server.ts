@@ -1,0 +1,10 @@
+import { setupApp } from "./config/app";
+
+const start = async () => {
+  const app = await setupApp();
+  app.listen(3000, () => {
+    console.log("Server running on port 3000");
+  });
+};
+
+start();

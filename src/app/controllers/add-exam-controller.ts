@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { ExamRepository } from "../../adapters/exam-repository";
 import { DbAddExam } from "../../domain/usecases/db-add-exam";
 
-export class AddExamContoller {
+export class AddExamController {
   async handle(request: Request, response: Response): Promise<Response> {
     const { name } = request.body;
     const dbAddExam = new DbAddExam(new ExamRepository());

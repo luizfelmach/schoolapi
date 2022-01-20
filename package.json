@@ -5,9 +5,9 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "start:prod": "node ./dist/index.js",
-    "start:dev": "ts-node ./src/index.ts",
-    "start:watch": "ts-node-dev --inspect --quiet --clear --transpile-only --ignore-watch node_modules ./src/index.ts",
+    "start:prod": "node ./dist/app/server.js",
+    "start:dev": "ts-node ./src/app/server.ts",
+    "start:watch": "ts-node-dev --inspect --quiet --clear --transpile-only --ignore-watch node_modules ./src/app/server.ts",
     "container:up": "tsc && docker-compose up",
     "container:down": "docker-compose down"
   },

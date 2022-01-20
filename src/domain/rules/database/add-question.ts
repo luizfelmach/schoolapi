@@ -1,5 +1,5 @@
 import { QuestionModel } from "../../models";
 
 export interface AddQuestion {
-  add(data: Omit<QuestionModel, "id">): Promise<{} | QuestionModel>;
+  add(data: Omit<QuestionModel, "id">): Promise<QuestionModel>;
 }

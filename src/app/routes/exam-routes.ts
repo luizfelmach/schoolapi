@@ -1,7 +1,6 @@
 import { Request, Response, Router } from "express";
+import { AddExamContoller } from "../controllers/add-exam-controller";
 
 export const examRoutes = (router: Router) => {
-  router.get("/exams", (request: Request, response: Response) =>
-    response.json({ ok: "exams" })
-  );
+  router.post("/exams", new AddExamContoller().handle);
 };

@@ -14,7 +14,11 @@ export class ExamRepository implements AddExam, LoadExams {
   }
 
   async load(): Promise<ExamModel[]> {
-    const exams = await prismaClient.exam.findMany();
+    const exams = await prismaClient.exam.findMany({
+      include: {
+        questions: true,
+      },
+    });
     return exams;
   }
 }
